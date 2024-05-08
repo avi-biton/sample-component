@@ -8,14 +8,14 @@ metadata:
     pipelinesascode.tekton.dev/max-keep-runs: "3"
     pipelinesascode.tekton.dev/on-cel-expression: event == "pull_request" && target_branch
       == "main"
-    ipelinesascode.tekton.dev/task: tasks/buildah/2.0/buildah.yaml
+    pipelinesascode.tekton.dev/task: tasks/buildah/2.0/buildah.yaml
   creationTimestamp: null
   labels:
-    appstudio.openshift.io/application: sample-component
-    appstudio.openshift.io/component: sample-component
+    appstudio.openshift.io/application: sample-component-avi
+    appstudio.openshift.io/component: sample-component-avi
     pipelines.appstudio.openshift.io/type: build
   generateName: sample-component-on-pull-request-
-  namespace: user-ns2
+  namespace: user-ns1
 spec:
   params:
   - name: dockerfile
